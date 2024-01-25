@@ -47,5 +47,45 @@ internal class Program
         };
 
         Console.WriteLine(result);
+
+        //1-task for repeat chapter
+        int sum = 0;
+        int i = 1;
+
+        while(i < 1000)
+        {
+            sum += i;
+            i += 2;
+        }
+
+        Console.WriteLine($"The sum of odd numbers till 1000 : {sum}");
+
+        //2-task for repeat chapter
+        int[] array = { 4, 9, 8, 3, 5, 6, 2 }; //for example
+        int maxValue = array[0];
+        int minValue = array[0];
+
+        for(int j = 1; j < array.Length; j++)
+        {
+            minValue = array[j] < minValue ? array[j] : minValue;
+            maxValue = array[j] > maxValue ? array[j] : maxValue;
+        }
+        
+        Console.WriteLine($"{maxValue} * {minValue} = {minValue * maxValue}");
+
+        //3-task for repeat chapter
+        Console.Write("Enter a number: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int factorial = 1;
+        for(int j = 1; j <= b; j++)
+        {
+            factorial = factorial * j;
+        }
+
+        Console.WriteLine($"{b}! = {factorial}");
+
+
+
     }
 }
