@@ -1,11 +1,32 @@
 ﻿using System.Globalization;
 using System.Security.Cryptography;
+using BasicConsoleApp.Classes;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        //1-task
+        Console.Write("Enter book name: ");
+        string bookName = Console.ReadLine();
+        Console.Write("Enter author name: ");
+        string authorName = Console.ReadLine();
+
+        Book book = new Book(bookName, authorName);
+        book.BookName = "Oila";
+        book.AuthorName = "Fitrat";
+        book.Price = 30000;
+        book.Information();
+        
+        // Task1();
+        // Task2();
+        // Task3();
+        // Task1ForRepeatChapter();
+        // Task2ForRepeatChapter();
+        // Task3ForRepeatChapter();
+    }
+
+    static void Task1()
+    {
         string str = "teLefOn";
         Console.Write("a = ");
         int a = Convert.ToInt32(Console.ReadLine());
@@ -14,8 +35,9 @@ internal class Program
             Console.WriteLine(str.ToUpper());
         else
             Console.WriteLine(str.ToLower());
-
-        //2-task
+    }
+    static void Task2()
+    {
         Console.Write("x = ");
         int x = Convert.ToInt32(Console.ReadLine());
         Console.Write("y = ");
@@ -29,8 +51,9 @@ internal class Program
             Console.WriteLine("x is equal to y");
         else
             Console.WriteLine("x and y are not comparable each other");
-
-        //3-task
+    }
+    static void Task3()
+    {
         Console.Write("Enter a weekday: ");
         string weekday = Console.ReadLine();
 
@@ -47,8 +70,9 @@ internal class Program
         };
 
         Console.WriteLine(result);
-
-        //1-task for repeat chapter
+    }
+    static void Task1ForRepeatChapter()
+    {
         int sum = 0;
         int i = 1;
 
@@ -59,8 +83,9 @@ internal class Program
         }
 
         Console.WriteLine($"The sum of odd numbers till 1000 : {sum}");
-
-        //2-task for repeat chapter
+    }
+    static void Task2ForRepeatChapter()
+    {
         int[] array = { 4, 9, 8, 3, 5, 6, 2 }; //for example
         int maxValue = array[0];
         int minValue = array[0];
@@ -72,8 +97,9 @@ internal class Program
         }
         
         Console.WriteLine($"{maxValue} * {minValue} = {minValue * maxValue}");
-
-        //3-task for repeat chapter
+    }
+    static void Task3ForRepeatChapter()
+    {
         Console.Write("Enter a number: ");
         int b = Convert.ToInt32(Console.ReadLine());
 
@@ -84,8 +110,5 @@ internal class Program
         }
 
         Console.WriteLine($"{b}! = {factorial}");
-
-
-
     }
 }
